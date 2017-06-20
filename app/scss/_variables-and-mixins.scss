@@ -1,0 +1,36 @@
+//Fonts
+// $main-font: 'Roboto';
+// $secondary-font: 'Tahoma';
+// $tertiary-font: 'Open Sans';
+// $main-ff: sans-serif;
+//Colors
+$main-font-color: #ffffff;
+$main-bg: #849d8f;
+$dark-grey: #323232;
+$light-grey: #5a5a5a;
+
+//Custom fonts
+@font-face {
+  font-family: Roboto;
+  src: url("../fonts/roboto.woff2") format('woff2'), url("../fonts/roboto.woff") format('woff'), url("../fonts/robotomedium.woff2") format('woff2'), url("../fonts/robotomedium.woff2") format('woff2');
+}
+
+//Font mixin
+@mixin font($size: false,
+$colour: false,
+$weight: false,
+$lh: false) {
+  font-family: 'Roboto', Helvetica, Arial, sans-serif;
+  @if $size {
+    font-size: $size;
+  }
+  @if $colour {
+    color: $colour;
+  }
+  @if $weight {
+    font-weight: $weight;
+  }
+  @if $lh {
+    line-height: $lh;
+  }
+}

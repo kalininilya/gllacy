@@ -1,0 +1,31 @@
+.map{
+  position: relative;
+  margin:0 auto;
+  max-width: 1400px;
+}
+.map-contacts{
+  position: absolute;
+  top: 5%;
+  right: 3%;
+  z-index: 300;
+  padding: 25px;
+  width: 300px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.98);
+
+  @include font(14px, $dark-grey, 400, false);
+
+  &__adress{
+    @include font(18px, $dark-grey, 700, false);
+  }
+  &__phone{
+    display: block;
+
+    @include font(18px, $dark-grey, 700, 25px);
+  }
+
+  &__btn{
+    margin-top: 25px;
+    width: 100%;
+  }
+}

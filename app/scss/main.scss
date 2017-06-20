@@ -1,0 +1,39 @@
+@import 'variables-and-mixins';
+@import 'header';
+@import 'banners';
+@import 'hits';
+@import 'features';
+@import 'news-subs';
+@import 'map';
+@import 'footer';
+
+body {
+  padding: 0;
+  min-width: 860px;
+  background: url("../images/bg-header.png") no-repeat;
+  background-color: $main-bg;
+  background-size: 100% auto;
+  color: $main-font-color;
+
+  -webkit-font-smoothing: antialiased;
+  @include font;
+}
+
+
+.wrapper{
+  margin: 0 auto;
+  padding-right: 10px;
+  padding-left: 10px;
+  max-width: 1200px;
+
+}
+
+.btn{
+  min-height: 46px;
+  border-radius: 50px;
+  background-image: linear-gradient(to top, #e74a35 0%, #f26843 100%);
+  text-align: center;
+  text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
+
+  @include font(18px, $main-font-color, 700, false);
+}

@@ -1,0 +1,37 @@
+.banners{
+  display: flex;
+  min-height: 230px;
+
+  align-items: stretch;
+}
+
+.banner{
+  padding-top: 20px;
+  padding-right: 20px;
+  padding-left: 20px;
+  width: 50%;
+  border-radius: 30px;
+
+  flex-grow: 1;
+  &__header{
+    @include font(35px, $main-font-color, 700, false);
+  }
+  &__content {
+    @include font(18px, $main-font-color, 700, false);
+  }
+
+  &--bg-raspberry{
+    margin-right: 20px;
+    background: url("../images/bg-banner-1.jpg") no-repeat;
+    background-size: cover;
+  }
+  &--bg-chocolate{
+    background: url("../images/bg-banner-2.jpg") no-repeat;
+    background-size: cover;
+  }
+  &__btn{
+    float: right;
+    margin-top: 40px;
+    margin-bottom: 30px;
+  }
+}

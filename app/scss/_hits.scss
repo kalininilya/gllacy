@@ -1,0 +1,41 @@
+.hits-list{
+  position: relative;
+  display: flex;
+  margin-top: 40px;
+  padding-left: 0;
+  
+  // align-content: stretch;
+  &__item{
+    position: relative;
+    flex-direction: column;
+    margin-right: 20px;
+    width: 100%;
+    list-style: none;
+    text-align: center;
+
+    flex-grow: 1;
+    flex-basis: 0;
+  }
+  &__image{
+    width: 100%;
+    // height: 100%;
+  }
+  &__item:last-child{
+    margin-right: 0px;
+  }
+  &__price{
+    position: absolute;
+    top: 50%;
+    left: 0;
+
+    @include font(45px, $main-font-color, 700, false);
+  }
+  &__weight{
+    @include font(30px, $main-font-color, 700, false);
+  }
+  &__descr{
+    text-decoration: underline;
+
+    @include font(16px, $main-font-color, 500, false);
+  }
+}

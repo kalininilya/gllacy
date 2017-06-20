@@ -1,0 +1,67 @@
+.news-subscription-container{
+  display: flex;
+  margin-top: 40px;
+  margin-bottom: 40px;
+
+  @include font(16px,$dark-grey, 500, false);
+}
+
+.news{
+  margin-right: 20px;
+  padding:20px;
+  min-height: 220px;
+  width: 100%;
+  border-radius: 30px;
+  background: url("../images/bg-news.jpg") no-repeat;
+  background-size: cover;
+
+  flex-grow: 1;
+
+
+  &__header{
+    display: block;
+    margin-bottom: 15px;
+  }
+  &__content{
+    display: inline-block;
+    max-width: 60%;
+    background-color: rgba(white, 0.7);
+
+    @include font(24px, $dark-grey, 700, false);
+  }
+}
+
+.subscription{
+  padding: 20px;
+  height: 100%;
+  border-radius: 30px;
+  background-color: #f8f7f4;
+
+  @include font(16px, $light-grey, 400, false);
+  &__border{
+    padding: 6px;
+    width: 100%;
+    border-radius: 30px;
+    background: url("../images/bg-subscription.jpg") no-repeat;
+    background-size: cover;
+
+    flex-grow: 1;
+  }
+  form{
+    display: flex;
+    margin-top: 25px;
+  }
+  input{
+    padding-left: 10px;
+    min-height: 44px;
+    width: 100%;
+    border: 1px solid rgba(178, 178, 178, 0.52);
+    border-radius: 4px;
+    color: $dark-grey;
+  }
+
+  &__btn{
+    margin-left: 10px;
+    width: 130px;
+  }
+}

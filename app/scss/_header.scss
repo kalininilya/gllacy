@@ -1,0 +1,155 @@
+@import 'variables-and-mixins';
+header {
+  position: relative;
+  // min-height: 700px;
+
+  justify-content: space-between;
+}
+
+
+.top-heading{
+  display: flex;
+
+  justify-content: space-between;
+}
+
+.main-menu-list {
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  &__item {
+    margin-top:32px;
+    margin-right: 20px;
+    list-style: none;
+    text-decoration: underline;
+
+    @include font(16px, false, 700, false);
+  }
+}
+
+.main-logo{
+  margin-top: 10px;
+  margin-right: 15px;
+}
+
+.user-block{
+  display: flex;
+
+  @include font(13px, false, 500, false);
+  align-items: center;
+  justify-content: space-around;
+  &__search{
+    display: flex;
+    min-width: 32px;
+    // padding-left: 16px;
+    min-height: 32px;
+    border-radius: 30px;
+    background-color: rgba(#FFF, .2);
+
+    align-items: center;
+    justify-content: space-around;
+    &-icon{
+      width: 17px;
+      height: 17px;
+    }
+  }
+  &__login{
+    display: flex;
+    margin-left: 10px;
+    padding-right: 32px;
+    padding-left: 16px;
+    min-height: 32px;
+    border-radius: 30px;
+    background-color: rgba(#FFF, .2);
+
+    align-items: center;
+    &-icon{
+      width: 20px;
+      height: 19px;
+    }
+    &-status {
+      margin-left: 8px;
+    }
+
+  }
+  &__cart{
+    display: flex;
+    margin-left: 10px;
+    padding-right: 32px;
+    padding-left: 16px;
+    min-height: 32px;
+    border-radius: 30px;
+    background-color: rgba(#FFF, .2);
+
+    align-items: center;
+    &-icon{
+      width: 21px;
+      height: 20px;
+    }
+    &-status{
+      margin-left: 8px;
+    }
+  }
+}
+
+.contacts{
+  position: absolute;
+  right: 0;
+  float: right;
+  &__schedule{
+    float: right;
+
+    @include font(14px, $main-font-color, 700, false);
+  }
+  &__phone-number{
+    @include font(22px, $main-font-color, 900, false);
+  }
+}
+
+.carousel-promo {
+  margin: 0 auto;
+  width: 100%;
+}
+
+.carousel-promo .item{
+  height: 600px;
+
+  &__caption{
+    position: absolute;
+    top: 55%;
+    right: 0;
+    left: 0;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+
+    @include font(60px, $main-font-color, 900, 60px);
+
+  }
+  &__image{
+    margin: 0 auto;
+  }
+}
+
+.carousel-indicators{
+  position: absolute;
+  left: 10%;
+  height: 50px;
+}
+
+.carousel-promo::after{
+  position: absolute;
+  bottom: 60px;
+  left: 50%;
+  display: block;
+  width: 278px;
+  height: 63px;
+  border-radius: 50px;
+  background-image: linear-gradient(to top, #e74a35 0%, #f26843 100%);
+  content: 'Давайте оба!';
+  text-align: center;
+  text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
+  transform: translateX(-50%);
+
+  @include font(31px, $main-font-color, 700, 63px);
+}
