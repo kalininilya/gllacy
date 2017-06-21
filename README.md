@@ -1,2 +1,2 @@
 # gllacy
-Website for ecommerce
+Responsive website for ecommerce
